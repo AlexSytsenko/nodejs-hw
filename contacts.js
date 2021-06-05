@@ -23,6 +23,7 @@ export async function listContacts() {
 }
 
 export async function getContactById(contactId) {
+  console.log(typeof contactId);
   try {
     const data = await fs.readFile(contactsPath)
     const contactsList = JSON.parse(data)
