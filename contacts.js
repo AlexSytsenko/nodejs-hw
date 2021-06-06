@@ -20,7 +20,6 @@ export async function listContacts() {
 }
 
 export async function getContactById(contactId) {
-  console.log(typeof contactId);
   try {
     const data = await fs.readFile(contactsPath);
     const contactsList = JSON.parse(data);
@@ -47,6 +46,9 @@ export async function removeContact(contactId) {
 
     await fs.writeFile(contactsPath, JSON.stringify(newContactList));
     console.log(`Сontact with id=${contactId} removed`);
+
+    listContacts();
+
   } catch (error) {
     console.log(error.message);
   }
@@ -66,6 +68,9 @@ export async function addContact(name, email, phone) {
 
     await fs.writeFile(contactsPath, newContactsList);
     console.log(`Contact ${name} added to the list`);
+
+    listContacts();
+
   } catch (error) {
     console.log(error.message);
   }
