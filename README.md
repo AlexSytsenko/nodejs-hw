@@ -1,4 +1,4 @@
 # nodejs-hw
 
-![alt text](https://github.com/[AlexSytsenko]/[nodejs-hw]/blob/[main]/img/Screenshot_1.jpg?raw=true)
+![alt text](https://github.com/[AlexSytsenko]/[nodejs-hw]/blob/[main]/Screenshot_1.jpg?raw=true)
 
