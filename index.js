@@ -4,16 +4,6 @@ import program from './utils/commander.js';
 program.parse(process.argv);
 const argv = program.opts();
 
-
-
-  // getContactById('6cc3822f-f13d-45c6-a8da-b49b735ef7a9');
-// console.log(uuidv4());
-
-// listContacts()
-
-// addContact("Cyr Ja", "mtts.Cras@non.net", "(740) 222-2688");
-
-
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
@@ -21,7 +11,7 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "get":
-      getContactById(+id);
+      getContactById(id);
       break;
 
     case "add":
